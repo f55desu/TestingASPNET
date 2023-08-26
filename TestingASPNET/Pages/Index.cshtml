@@ -1,0 +1,110 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Odd Number Sum App";
+}
+
+<div class="text-center">
+    <h2>Enter an array of numbers for calculating (comma-separated):</h2>
+    <input type="text" id="numbersInput" />
+    <button id="calculateButton">Calculate Sum</button>
+    <p id="resultOdd"></p>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#calculateButton').click(function () {
+                var numbersInput = $('#numbersInput').val();
+                var numbersArray = numbersInput.split(',').map(function (num) {
+                    return parseInt(num);
+                });
+
+                $.ajax({
+                    url: '/Home/CalculateSum',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(numbersArray),
+                    success: function (response) {
+                        $('#resultOdd').text('Sum: ' + response.sum);
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
+</div>
+<div class="text-center">
+    <h2>Enter a word:</h2>
+    <input type="text" id="wordInput" />
+    <button id="palindromeButton">Is Palindrome?</button>
+    <p id="resultPalindrome"></p>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#palindromeButton').click(function () {
+                var wordInput = $('#wordInput').val();
+
+                $.ajax({
+                    url: '/Home/IsPalindrome',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(wordInput),
+                    success: function (response) {
+                        if (response.isPalindrome == true) { $('#resultPalindrome').text('Word is a palindrome'); }
+                        else if (response.isPalindrome == false) { $('#resultPalindrome').text('Word is not a palindrome'); }
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
+</div>
+<div class="text-center">
+    <h2>Enter an array of numbers for sorting (comma-separated):</h2>
+    <input type="text" id="arrayInput" />
+    <button id="sortButton">Sort</button>
+    <ul id="resultArray" list-style-type="none"></ul>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#sortButton').click(function () {
+                var numbersInput = $('#arrayInput').val();
+                var numbersArray = numbersInput.split(',').map(function (num) {
+                    return parseInt(num);
+                });
+
+                $.ajax({
+                    url: '/Sorting/Sort',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(numbersArray),
+                    success: function (response) {
+                        // const keys = Object.keys(response.sortedDict);
+                        var resultList = document.getElementById("resultArray")
+                        // Clear the list
+                        while (resultList.firstChild) {
+                            resultList.removeChild(resultList.firstChild);
+                        }
+                        // Fill the list with sorted elements
+                        response.sortedLL.forEach(el => {
+                            const li = document.createElement("li");
+                            li.style.listStyleType = "none";
+                            li.textContent = el;
+                            console.log(el);
+                            resultList.appendChild(li);
+                        });
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
+</div>
