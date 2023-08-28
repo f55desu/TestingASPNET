@@ -9,6 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendingDataService", "Testi
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{702B486C-1D1F-4ECD-A3B4-1D67B71F70A6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PalindromeService", "TestingASPNET\Services\PalindromeService\PalindromeService.csproj", "{886C1EF6-ED82-4C17-A285-794F95D92B7B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingService", "TestingASPNET\Services\SortingService\SortingService.csproj", "{2129BC32-8086-4EDD-B1D7-A404C467E0CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumOfOddService", "TestingASPNET\Services\SumOfOddService\SumOfOddService.csproj", "{337C4960-C017-4C85-95CE-834CB4F94C09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,18 @@ Global
 		{702B486C-1D1F-4ECD-A3B4-1D67B71F70A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{702B486C-1D1F-4ECD-A3B4-1D67B71F70A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{702B486C-1D1F-4ECD-A3B4-1D67B71F70A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{886C1EF6-ED82-4C17-A285-794F95D92B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{886C1EF6-ED82-4C17-A285-794F95D92B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{886C1EF6-ED82-4C17-A285-794F95D92B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{886C1EF6-ED82-4C17-A285-794F95D92B7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2129BC32-8086-4EDD-B1D7-A404C467E0CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2129BC32-8086-4EDD-B1D7-A404C467E0CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2129BC32-8086-4EDD-B1D7-A404C467E0CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2129BC32-8086-4EDD-B1D7-A404C467E0CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{337C4960-C017-4C85-95CE-834CB4F94C09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{337C4960-C017-4C85-95CE-834CB4F94C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{337C4960-C017-4C85-95CE-834CB4F94C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{337C4960-C017-4C85-95CE-834CB4F94C09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

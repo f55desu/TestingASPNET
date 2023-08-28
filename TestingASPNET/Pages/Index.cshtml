@@ -20,7 +20,7 @@
                 });
 
                 $.ajax({
-                    url: '/Home/CalculateSum',
+                    url: '/SumOfOdd/CalculateSum',
                     type: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify(numbersArray),
@@ -48,7 +48,7 @@
                 var wordInput = $('#wordInput').val();
 
                 $.ajax({
-                    url: '/Home/IsPalindrome',
+                    url: '/Palindrome/IsPalindrome',
                     type: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify(wordInput),

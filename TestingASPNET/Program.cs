@@ -1,4 +1,7 @@
 using Microsoft.AspNetCore.Mvc.Routing;
+using PalindromeService;
+using SortingService;
+using SumOfOddService;
 using TestingASPNET.Configuration;
 using TestingASPNET.Controllers;
 using TestingASPNET.Services.SendingDataService;
@@ -8,13 +11,16 @@ internal class Program
     private static void BootstrapServices(IServiceCollection services)
     {
         services.AddTransient<ISendingDataService, SendingDataServiceClass>();
+        services.AddSumOfOddService();
+        services.AddPalindromeService();
+        services.AddSortingService();
     }
 
     private static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
         var services = builder.Services;
-        
+
         services.AddRazorPages();
         services.AddControllers();
         services.AddAppAutoMappers();
@@ -44,8 +50,8 @@ internal class Program
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                name: "SumOfOdd",
+                pattern: "{controller=SumOfOdd}/{action=Index}/{id?}");
             endpoints.MapControllerRoute(
                 name: "Sorting",
                 pattern: "{controller=Sorting}/{action=Index}/{id?}");
@@ -53,8 +59,8 @@ internal class Program
                 name: "DisplayResult",
                 pattern: "{controller=DisplayResult}/{action=Index}/{id?}");
             endpoints.MapControllerRoute(
-                name: "Test",
-                pattern: "{controller=Test}/{action=Index}/{id?}");
+                name: "Palindrome",
+                pattern: "{controller=Palindrome}/{action=Index}/{id?}");
         });
 
         app.UseAuthorization();

@@ -1,49 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection.Metadata;
-using Microsoft.AspNetCore.Components.Forms;
-using Microsoft.AspNetCore.Mvc;
-using TestingASPNET.Datastructures;
+﻿using Microsoft.AspNetCore.Mvc;
+using SortingService;
 
 namespace TestingASPNET.Controllers
 {
     public class SortingController : Controller
     {
+        private readonly ISortingService _sortingService;
+
+        public SortingController(
+            ISortingService sortingService
+        )
+        {
+            _sortingService = sortingService;
+        }
+
         [HttpPost]
         public IActionResult Sort([FromBody] int[] numbers)
         {
-            if (numbers == null || numbers.Length == 0)
+            try
             {
-                return BadRequest("Array of numbers is required.");
-            }
+                var sortedNumbers = _sortingService.Sort(numbers);
 
-            SortingLinkedList<int> sortingLL = new SortingLinkedList<int>();
-            for (int i = 0; i < numbers.Length; i++)
+                return Ok(new { sortedLL = sortedNumbers });
+            }
+            catch ( Exception e )
             {
-                sortingLL.Append(numbers[i]);
+                return BadRequest(e.Message);
             }
-
-            QuickSort<int>.Sort(sortingLL);
-            int[] sortedNumbers = new int[numbers.Length];
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                sortedNumbers[i] = sortingLL.GetElementAt(i);
-            }
-
-            return Ok(new { sortedLL = sortedNumbers });
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-    }
-    class QuickSort<T> where T : IComparable<T>
-    {
-        public static void Sort(SortingLinkedList<T> list)
-        {
-            /*list.head = QuickSortMethod(list.head, null);*/
-            list.BubbleSortMethod();
-        }
     }
 }

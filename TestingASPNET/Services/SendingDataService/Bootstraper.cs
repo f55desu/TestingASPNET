@@ -2,12 +2,11 @@
 
 namespace TestingASPNET.Services.SendingDataService;
 
-public static class Bootstrapper
+public static class Bootstraper
 {
     public static IServiceCollection AddSendingDataService(this IServiceCollection services)
     {
-        services
-            .AddSingleton<ISendingDataService, SendingDataServiceClass>();
+        services.AddTransient<ISendingDataService, SendingDataServiceClass>();
 
         return services;
     }
