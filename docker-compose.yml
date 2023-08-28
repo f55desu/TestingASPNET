@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  testingaspnet:
+    image: ${DOCKER_REGISTRY-}testingaspnet
+    build:
+      context: .
+      dockerfile: TestingASPNET/Dockerfile

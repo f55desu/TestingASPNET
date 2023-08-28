@@ -25,6 +25,7 @@ namespace TestingASPNET.Controllers
 
             return Ok(new { Sum = result });
         }
+
         [HttpPost]
         public IActionResult IsPalindrome([FromBody]string input)
         {
@@ -59,6 +60,10 @@ namespace TestingASPNET.Controllers
             }
 
             return Ok(new { isPalindrome = true });
+        }
+        public IActionResult Index()
+        {
+            return View();
         }
     }
 }

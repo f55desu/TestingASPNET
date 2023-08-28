@@ -1,0 +1,21 @@
+@page
+@model DisplayResultModel
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Response Result Page</title>
+</head>
+<body>
+    <h1>Response result:</h1>
+    @if (Model != null)
+    {
+        <p>@Model.String</p>
+    }
+    else
+    {
+    <p>View model not initialized.</p>
+    }
+</body>
+</html>

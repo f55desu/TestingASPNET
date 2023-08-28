@@ -9,41 +9,45 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TestingASPNET
 build_property.RootNamespace = TestingASPNET
-build_property.ProjectDir = C:\Users\VivoBook\OneDrive\TestingASPNET\TestingASPNET\
+build_property.ProjectDir = C:\Users\igory\OneDrive\TestingASPNET\TestingASPNET\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\VivoBook\OneDrive\TestingASPNET\TestingASPNET
+build_property.MSBuildProjectDirectory = C:\Users\igory\OneDrive\TestingASPNET\TestingASPNET
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/VivoBook/OneDrive/TestingASPNET/TestingASPNET/Pages/Error.cshtml]
+[C:/Users/igory/OneDrive/TestingASPNET/TestingASPNET/Pages/DisplayResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlzcGxheVJlc3VsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/igory/OneDrive/TestingASPNET/TestingASPNET/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/VivoBook/OneDrive/TestingASPNET/TestingASPNET/Pages/Index.cshtml]
+[C:/Users/igory/OneDrive/TestingASPNET/TestingASPNET/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/VivoBook/OneDrive/TestingASPNET/TestingASPNET/Pages/Privacy.cshtml]
+[C:/Users/igory/OneDrive/TestingASPNET/TestingASPNET/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/VivoBook/OneDrive/TestingASPNET/TestingASPNET/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/igory/OneDrive/TestingASPNET/TestingASPNET/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/VivoBook/OneDrive/TestingASPNET/TestingASPNET/Pages/_ViewImports.cshtml]
+[C:/Users/igory/OneDrive/TestingASPNET/TestingASPNET/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/VivoBook/OneDrive/TestingASPNET/TestingASPNET/Pages/_ViewStart.cshtml]
+[C:/Users/igory/OneDrive/TestingASPNET/TestingASPNET/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/VivoBook/OneDrive/TestingASPNET/TestingASPNET/Views/Odds.cshtml]
+[C:/Users/igory/OneDrive/TestingASPNET/TestingASPNET/Views/Odds.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Rkcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/VivoBook/OneDrive/TestingASPNET/TestingASPNET/Pages/Shared/_Layout.cshtml]
+[C:/Users/igory/OneDrive/TestingASPNET/TestingASPNET/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-59uy7keisx

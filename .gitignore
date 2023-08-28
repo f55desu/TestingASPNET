@@ -1,1 +1,6 @@
+.gitignore
 .vs
+TestingASPNET/bin/
+TestingASPNET/obj/
+bin/
+obj/
